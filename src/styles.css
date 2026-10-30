@@ -1,0 +1,298 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Saraj Foundation — design system.
+ * Warm charcoal dark, saffron/orange primary, cream backgrounds, teal logo accent.
+ * All colors in oklch; utilities mapped through @theme inline.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-cream: var(--brand-cream);
+  --color-brand-cream-deep: var(--brand-cream-deep);
+  --color-brand-teal: var(--brand-teal);
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Jost", "Segoe UI", sans-serif;
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.24 0.02 70);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.02 70);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.02 70);
+  --primary: oklch(0.75 0.155 65);
+  --primary-foreground: oklch(0.99 0.005 90);
+  --secondary: oklch(0.965 0.022 85);
+  --secondary-foreground: oklch(0.24 0.02 70);
+  --muted: oklch(0.955 0.018 85);
+  --muted-foreground: oklch(0.5 0.02 70);
+  --accent: oklch(0.955 0.025 80);
+  --accent-foreground: oklch(0.24 0.02 70);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.92 0.015 80);
+  --input: oklch(0.92 0.015 80);
+  --ring: oklch(0.75 0.155 65);
+  --brand-dark: oklch(0.19 0.012 75);
+  --brand-cream: oklch(0.972 0.019 88);
+  --brand-cream-deep: oklch(0.945 0.03 80);
+  --brand-teal: oklch(0.62 0.095 195);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+}
+
+/* ---------- Shared component styles ---------- */
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-xs font-semibold tracking-[0.14em] uppercase text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_32px_-12px_var(--color-primary)] active:translate-y-0;
+}
+
+.btn-outline-light {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-7 py-3.5 text-xs font-semibold tracking-[0.14em] uppercase text-white transition-all duration-300 hover:border-white hover:bg-white/10;
+}
+
+.section-label {
+  @apply inline-flex items-center gap-3 font-display text-sm font-medium italic text-primary;
+}
+
+.section-label::before {
+  content: "";
+  @apply h-px w-8 bg-primary;
+}
+
+/* Soft entrance animation, used with .is-inview via IntersectionObserver */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.reveal.is-inview {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 5s ease-in-out infinite;
+}
+
+@keyframes hero-zoom-slow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.035);
+  }
+}
+
+.animate-hero-zoom {
+  animation: hero-zoom-slow 4s cubic-bezier(0.2, 0.8, 0.4, 1) forwards;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-infinite {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 32s linear infinite;
+}
+
+.animate-marquee-infinite:hover {
+  animation-play-state: paused;
+}
+
+/* All headings in capital letters */
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+}
+
+/* All buttons in capital letters */
+button,
+.btn-primary,
+.btn-outline-light,
+a.btn-primary,
+[role="button"] {
+  text-transform: uppercase;
+}
+
+/* --- Saraj Foundation Animated Logo Keyframes --- */
+
+@keyframes sunlight-pulse {
+  0%, 100% {
+    transform: scale(0.96);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.16);
+    opacity: 0.85;
+  }
+}
+
+.animate-sunlight-pulse {
+  animation: sunlight-pulse 3.8s ease-in-out infinite;
+}
+
+@keyframes sunbeams-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-sunbeams-rotate {
+  animation: sunbeams-rotate 40s linear infinite;
+}
+
+@keyframes emblem-sway {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(3.5deg);
+  }
+  75% {
+    transform: rotate(-3.5deg);
+  }
+}
+
+.animate-emblem-sway {
+  animation: emblem-sway 7s ease-in-out infinite;
+}
+
+@keyframes dove-hands-float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-3px) scale(1.04);
+    opacity: 1;
+  }
+}
+
+.animate-dove-hands-float {
+  animation: dove-hands-float 4.2s ease-in-out infinite;
+}
+
+@keyframes leaves-sway {
+  0%, 100% {
+    transform: rotate(0deg) scaleX(1);
+  }
+  33% {
+    transform: rotate(-2.5deg) scaleX(1.02);
+  }
+  66% {
+    transform: rotate(2.5deg) scaleX(0.98);
+  }
+}
+
+.animate-leaves-sway {
+  animation: leaves-sway 4.5s ease-in-out infinite;
+}
+
+@keyframes cinematic-shimmer {
+  0%, 20% {
+    transform: translateX(-150%) rotate(25deg);
+  }
+  60%, 100% {
+    transform: translateX(150%) rotate(25deg);
+  }
+}
+
+.animate-cinematic-shimmer {
+  animation: cinematic-shimmer 5.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes pulse-gentle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.08);
+  }
+}
+
+.animate-pulse-gentle {
+  animation: pulse-gentle 3.2s ease-in-out infinite;
+}
+
+@keyframes text-glow {
+  0%, 100% {
+    letter-spacing: 0.42em;
+    opacity: 0.85;
+  }
+  50% {
+    letter-spacing: 0.45em;
+    opacity: 1;
+  }
+}
+
+.animate-text-glow {
+  animation: text-glow 6s ease-in-out infinite;
+}
