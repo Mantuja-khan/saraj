@@ -43,6 +43,11 @@
   --color-brand-teal: var(--brand-teal);
   --font-display: "Playfair Display", Georgia, serif;
   --font-sans: "Jost", "Segoe UI", sans-serif;
+  --font-cursive: "Caveat", "Dancing Script", cursive;
+}
+
+.font-cursive {
+  font-family: "Caveat", "Dancing Script", cursive;
 }
 
 :root {

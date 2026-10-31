@@ -7,6 +7,7 @@ import aboutChildPortrait from "@/assets/about-child-portrait.jpg";
 import {
   Sparkles,
   Heart,
+  HeartHandshake,
   CheckCircle2,
   Users,
   Award,
@@ -35,8 +36,8 @@ export default function About() {
               WHO WE ARE
             </div>
 
-            <h1 className="mt-6 font-display text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-              ABOUT SARAJ FOUNDATION
+            <h1 className="mt-6 font-cursive text-5xl font-bold tracking-wide sm:text-6xl lg:text-7xl">
+              About Saraj Foundation
             </h1>
 
             <p className="mt-6 text-base sm:text-lg leading-relaxed text-white/85 max-w-3xl mx-auto font-sans">
@@ -70,8 +71,8 @@ export default function About() {
                   OUR APPROACH
                 </div>
 
-                <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-[#1c1815]">
-                  A COMMITMENT TO LASTING HUMAN DIGNITY
+                <h2 className="font-cursive text-4xl sm:text-5xl font-bold tracking-wide text-[#1c1815]">
+                  A Commitment to Lasting Human Dignity
                 </h2>
 
                 <p className="mt-5 text-base sm:text-lg leading-relaxed text-stone-700 font-sans">
@@ -120,8 +121,8 @@ export default function About() {
         <section className="bg-[#faf7f2] py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center mb-16">
-              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#1c1815]">
-                OUR CORE VALUES
+              <h2 className="font-cursive text-4xl sm:text-5xl lg:text-6xl font-bold tracking-wide text-[#1c1815]">
+                Our Core Values
               </h2>
               <p className="mt-3 text-base sm:text-lg leading-relaxed text-stone-600">
                 The ethical bedrock that shapes every program, partnership, and decision.
@@ -169,6 +170,42 @@ export default function About() {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* About Page Dedicated Call To Action (CTA) Section */}
+        <section className="relative overflow-hidden bg-brand-dark py-16 sm:py-20 lg:py-24 text-white">
+          <div className="pointer-events-none absolute -top-24 -left-24 size-96 rounded-full bg-primary/20 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 -right-24 size-96 rounded-full bg-amber-500/10 blur-3xl" />
+
+          <div className="relative mx-auto max-w-4xl px-6 text-center lg:px-8">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-primary mb-4">
+              <Sparkles className="size-3.5" />
+              MAKE A LASTING DIFFERENCE
+            </div>
+
+            <h2 className="font-cursive text-4xl sm:text-5xl lg:text-6xl font-bold tracking-wide text-white">
+              Join Us to Bring Hope and Smiles
+            </h2>
+
+            <p className="mt-4 text-base sm:text-lg leading-relaxed text-white/80 max-w-2xl mx-auto font-sans">
+              Every child deserves learning, every elder deserves dignity, and every community deserves a chance to thrive.
+              Partner with us today to empower underserved families across India.
+            </p>
+
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+              <Link to="/donate" className="btn-primary !px-8 !py-3.5 text-sm font-bold shadow-lg shadow-primary/25">
+                <HeartHandshake className="size-4" />
+                Donate Now
+                <ArrowRight className="size-4" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 py-3.5 text-sm font-bold text-white hover:bg-white/20 transition-colors backdrop-blur-sm"
+              >
+                Volunteer With Us
+              </Link>
             </div>
           </div>
         </section>

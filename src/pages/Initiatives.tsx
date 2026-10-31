@@ -84,7 +84,7 @@ export default function Initiatives() {
               Our Core Programs
             </div>
 
-            <h1 className="mt-6 font-display text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 font-cursive text-5xl font-bold tracking-wide sm:text-6xl lg:text-7xl">
               Saraj Foundation Initiatives
             </h1>
 
@@ -125,7 +125,7 @@ export default function Initiatives() {
 
                   {/* Text Column */}
                   <div className={`lg:col-span-6 ${isEven ? "lg:order-1" : ""}`}>
-                    <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-stone-900 leading-tight">
+                    <h2 className="font-cursive text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 leading-tight">
                       {item.title}
                     </h2>
 

@@ -44,7 +44,7 @@ export default function Donate() {
               Make A Difference Today
             </div>
 
-            <h1 className="mt-5 font-display text-3xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="mt-5 font-cursive text-5xl font-bold tracking-wide sm:text-6xl lg:text-7xl">
               Donate to Saraj Foundation
             </h1>
 

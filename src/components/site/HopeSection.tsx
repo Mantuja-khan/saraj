@@ -75,7 +75,7 @@ export function HopeSection() {
             Welcome To Saraj Foundation
           </p>
 
-          <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.14] text-[#1c1815]">
+          <h2 className="mt-3 font-cursive text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.14] text-[#1c1815] tracking-wide">
             We Can Donate for Better Future
           </h2>
         </div>

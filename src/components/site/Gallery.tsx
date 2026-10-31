@@ -5,14 +5,26 @@ import causeNutrition from "@/assets/cause-nutrition.jpg";
 import eventOutreach from "@/assets/event-outreach.jpg";
 import eventHealthCamp from "@/assets/event-health-camp.jpg";
 import galleryPlay from "@/assets/gallery-play.jpg";
+import newImage1 from "@/assets/image copy.png";
+import newImage2 from "@/assets/image copy 2.png";
+import newImage3 from "@/assets/image copy 3.png";
+import newImage4 from "@/assets/image copy 4.png";
+import newImage5 from "@/assets/image copy 5.png";
+import newImage6 from "@/assets/image copy 6.png";
 
 const tiles = [
   { src: causeEducation, alt: "Children studying in a village classroom" },
-  { src: eventOutreach, alt: "Volunteers handing school kits to children" },
+  { src: newImage1, alt: "Community youth and volunteers together" },
   { src: causeHealth, alt: "A mother with her healthy baby at a clinic" },
+  { src: newImage3, alt: "Grassroots outreach support drive" },
   { src: galleryPlay, alt: "Children running and laughing in a field" },
+  { src: newImage4, alt: "Essential items and kits distribution" },
   { src: causeNutrition, alt: "Children enjoying a warm midday meal" },
+  { src: newImage5, alt: "Community healthcare camp" },
   { src: eventHealthCamp, alt: "Doctor checking a child at a health camp" },
+  { src: newImage6, alt: "Smiling young beneficiaries" },
+  { src: eventOutreach, alt: "Volunteers handing school kits to children" },
+  { src: newImage2, alt: "Mentorship and education guidance" },
 ];
 
 /** In-page scroll reveal for the gallery strip. */

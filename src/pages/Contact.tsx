@@ -42,7 +42,7 @@ export default function Contact() {
               Get in Touch
             </div>
 
-            <h1 className="mt-6 font-display text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 font-cursive text-5xl font-bold tracking-wide sm:text-6xl lg:text-7xl">
               Contact Saraj Foundation
             </h1>
 
@@ -139,7 +139,7 @@ export default function Contact() {
               {/* Right Column: Interactive Contact Form */}
               <div className="lg:col-span-7">
                 <div className="rounded-3xl border border-stone-200 bg-white p-8 sm:p-10 shadow-lg">
-                  <h2 className="font-display text-2xl sm:text-3xl font-bold text-stone-900 text-center mb-2">
+                  <h2 className="font-cursive text-3xl sm:text-4xl font-bold text-stone-900 text-center mb-2">
                     Send Us a Message
                   </h2>
                   <p className="text-center text-stone-600 text-sm mb-8">

@@ -49,7 +49,7 @@ export function ActionCards() {
           What We Do
         </div>
 
-        <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#1c1815]">
+        <h2 className="font-cursive text-4xl sm:text-5xl lg:text-6xl font-bold tracking-wide text-[#1c1815]">
           What We Do
         </h2>
 

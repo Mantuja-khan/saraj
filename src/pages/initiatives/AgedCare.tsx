@@ -23,7 +23,7 @@ export default function AgedCare() {
               <Sparkles className="size-3.5" />
               Elder Care Initiative
             </div>
-            <h1 className="mt-6 font-display text-4xl font-extrabold sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 font-cursive text-5xl font-bold tracking-wide sm:text-6xl lg:text-7xl">
               Aged People Care Routine
             </h1>
             <p className="mt-4 text-base sm:text-lg text-white/80 max-w-2xl mx-auto">
@@ -45,7 +45,7 @@ export default function AgedCare() {
               </div>
 
               <div>
-                <h2 className="font-display text-3xl font-bold text-stone-900">
+                <h2 className="font-cursive text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 leading-tight">
                   Honoring and Caring for Our Elders
                 </h2>
                 <p className="mt-4 text-stone-600 leading-relaxed text-sm sm:text-base">

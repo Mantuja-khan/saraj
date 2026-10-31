@@ -83,7 +83,7 @@ export function MissionVisionCircles({ hideMoreButton = false }: MissionVisionCi
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="mx-auto max-w-3xl text-center mb-10 sm:mb-14">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-brand-dark uppercase">
+          <h2 className="font-cursive text-4xl sm:text-5xl lg:text-6xl font-bold tracking-wide text-brand-dark">
             Together, We Can Make a Difference
           </h2>
           <p className="mt-3 text-base sm:text-lg leading-relaxed text-stone-600 max-w-2xl mx-auto">

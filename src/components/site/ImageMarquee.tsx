@@ -8,13 +8,19 @@ import causeNutrition from "@/assets/cause-nutrition.jpg";
 import galleryPlay from "@/assets/gallery-play.jpg";
 import eventHealthCamp from "@/assets/event-health-camp.jpg";
 import eventOutreach from "@/assets/event-outreach.jpg";
+import newImage1 from "@/assets/image copy.png";
+import newImage3 from "@/assets/image copy 3.png";
+import newImage5 from "@/assets/image copy 5.png";
 
 const marqueeImages = [
   { src: cardEducation, label: "Education & Literacy" },
+  { src: newImage1, label: "Youth & Community Pride" },
   { src: cardSpecialChild, label: "Special Needs Child Care" },
   { src: causeWomenEmpowerment, label: "Women Empowerment" },
+  { src: newImage3, label: "Grassroots Village Drives" },
   { src: cardLivelihood, label: "Sustainable Livelihood" },
   { src: cardAgedCare, label: "Aged Care Routine" },
+  { src: newImage5, label: "Healthcare & Wellness" },
   { src: causeNutrition, label: "Nutritious Food Kits" },
   { src: galleryPlay, label: "Child Development & Sports" },
   { src: eventHealthCamp, label: "Community Health Camps" },
@@ -50,8 +56,8 @@ export function ImageMarquee() {
     <section id="our-families" className="relative py-12 sm:py-16 lg:py-20 overflow-hidden select-none bg-transparent">
       {/* Centered Heading */}
       <div className="reveal mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center mb-8 sm:mb-12">
-        <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#1c1815] uppercase">
-          OUR FAMILIES
+        <h2 className="font-cursive text-4xl sm:text-5xl lg:text-6xl font-bold tracking-wide text-[#1c1815]">
+          Our Memories
         </h2>
       </div>
 

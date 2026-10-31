@@ -15,6 +15,20 @@ import heroSlide3 from "@/assets/hero-slide-3.jpg";
 import aboutChildPortrait from "@/assets/about-child-portrait.jpg";
 import causeWomenEmpowerment from "@/assets/cause-women-empowerment.jpg";
 import cardSpecialChild from "@/assets/card-special-child.png";
+import cardAgedCare from "@/assets/card-aged-care.png";
+import cardLivelihood from "@/assets/card-livelihood.png";
+import causeAgedCare from "@/assets/cause-aged-care.jpg";
+import causeLivelihood from "@/assets/cause-livelihood.jpg";
+import causeSpecialChild from "@/assets/cause-special-child.jpg";
+
+// Recently added community & initiative photos
+import newImageMain from "@/assets/image.png";
+import newImage1 from "@/assets/image copy.png";
+import newImage2 from "@/assets/image copy 2.png";
+import newImage3 from "@/assets/image copy 3.png";
+import newImage4 from "@/assets/image copy 4.png";
+import newImage5 from "@/assets/image copy 5.png";
+import newImage6 from "@/assets/image copy 6.png";
 
 const galleryItems = [
   {
@@ -89,9 +103,63 @@ const galleryItems = [
     title: "Community Protective Circle",
     caption: "Ensuring safety, child rights, and continuous family counseling.",
   },
+  {
+    src: newImage1,
+    category: "Activities",
+    title: "Joyful Moments in Community",
+    caption: "Children and youth gathering together in celebration and hope.",
+  },
+  {
+    src: newImage2,
+    category: "Education",
+    title: "Learning and Mentorship",
+    caption: "Dedicated volunteers guiding students on foundational literacy.",
+  },
+  {
+    src: newImage3,
+    category: "Community",
+    title: "Grassroots Village Drives",
+    caption: "Meeting families directly in their hamlets to provide comprehensive assistance.",
+  },
+  {
+    src: newImage4,
+    category: "Outreach",
+    title: "Essential Supplies Distribution",
+    caption: "Delivering books, warm apparel, and vital nutritional support.",
+  },
+  {
+    src: newImage5,
+    category: "Healthcare",
+    title: "Community Wellness & Hygiene",
+    caption: "Regular health interventions and wellness drives across villages.",
+  },
+  {
+    src: newImage6,
+    category: "Activities",
+    title: "Smiles of Tomorrow",
+    caption: "Celebrating small victories and empowering young dreams every day.",
+  },
+  {
+    src: newImageMain,
+    category: "Community",
+    title: "Saraj Foundation In Action",
+    caption: "Bringing people together to make a real, lasting difference.",
+  },
+  {
+    src: causeAgedCare,
+    category: "Special Care",
+    title: "Aged Citizen Care Support",
+    caption: "Regular meals, medical care, and companionship for our elders.",
+  },
+  {
+    src: causeLivelihood,
+    category: "Livelihood",
+    title: "Self-Reliance & Skills",
+    caption: "Equipping families with trade skills for continuous livelihood.",
+  },
 ];
 
-const categories = ["All", "Education", "Healthcare", "Nutrition", "Activities", "Special Care", "Livelihood", "Outreach"];
+const categories = ["All", "Education", "Healthcare", "Nutrition", "Activities", "Special Care", "Livelihood", "Outreach", "Community"];
 
 export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -121,7 +189,7 @@ export default function GalleryPage() {
               Moments of Hope
             </div>
 
-            <h1 className="mt-6 font-display text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 font-cursive text-5xl font-bold tracking-wide sm:text-6xl lg:text-7xl">
               Our Photo Gallery
             </h1>
 

@@ -36,6 +36,7 @@ export function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+
   return (
     <header
       className={`sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur-md transition-all duration-300 ${
@@ -148,14 +149,14 @@ export function Navbar() {
           </ul>
         </nav>
 
-        {/* Right Corner: Donate Now Button & Mobile Hamburger */}
+        {/* Right Corner: Desktop Donate Now Button & Mobile Hamburger Toggle */}
         <div className="flex shrink-0 items-center gap-3">
           <Link
             to="/donate"
-            className="btn-primary hidden sm:inline-flex !px-7 !py-3 text-xs font-bold shadow-md shadow-primary/25"
+            className="btn-primary hidden lg:inline-flex !px-7 !py-3 text-xs font-bold shadow-md shadow-primary/25"
           >
             <HeartHandshake className="size-4" />
-            Donate Now
+            Donate
           </Link>
 
           <button
@@ -163,16 +164,16 @@ export function Navbar() {
             onClick={() => setMobileOpen((v) => !v)}
             aria-expanded={mobileOpen}
             aria-label="Toggle menu"
-            className="inline-flex size-11 items-center justify-center rounded-full border border-stone-200 text-stone-800 lg:hidden hover:bg-stone-50"
+            className="inline-flex size-11 items-center justify-center rounded-full border border-stone-200 text-stone-800 lg:hidden hover:bg-stone-50 transition-colors"
           >
             {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Dropdown Menu (opened like previously) */}
       {mobileOpen && (
-        <div className="border-t border-stone-200 bg-white px-6 py-5 lg:hidden max-h-[80vh] overflow-y-auto">
+        <div className="border-t border-stone-200 bg-white px-6 py-5 lg:hidden max-h-[80vh] overflow-y-auto shadow-lg animate-in fade-in slide-in-from-top-2 duration-200">
           <ul className="flex flex-col gap-1.5">
             <li>
               <Link
@@ -194,7 +195,7 @@ export function Navbar() {
               </Link>
             </li>
 
-            {/* Mobile Initiatives Accordion - Simple list of names only */}
+            {/* Mobile Initiatives Accordion */}
             <li>
               <div className="flex w-full items-center justify-between rounded-xl px-3.5 py-2.5 text-xs font-bold uppercase tracking-wider text-stone-800 hover:bg-stone-50">
                 <Link
@@ -208,6 +209,7 @@ export function Navbar() {
                   type="button"
                   onClick={() => setMobileInitiativesOpen((v) => !v)}
                   className="p-1"
+                  aria-label="Toggle initiatives submenu"
                 >
                   <ChevronDown
                     className={`size-4 transition-transform duration-200 ${
@@ -266,11 +268,12 @@ export function Navbar() {
               </Link>
             </li>
 
+            {/* Donate Now Button inside the Toggle Bar Section */}
             <li className="pt-3">
               <Link
                 to="/donate"
                 onClick={() => setMobileOpen(false)}
-                className="btn-primary w-full !py-3 text-xs font-bold uppercase tracking-wider"
+                className="btn-primary w-full !py-3.5 text-xs font-bold uppercase tracking-wider shadow-md shadow-primary/20"
               >
                 <HeartHandshake className="size-4" />
                 DONATE NOW
