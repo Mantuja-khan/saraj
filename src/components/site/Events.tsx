@@ -1,7 +1,7 @@
 import { CalendarDays, Clock, MapPin } from "lucide-react";
-import eventOutreach from "@/assets/event-outreach.jpg";
-import eventHealthCamp from "@/assets/event-health-camp.jpg";
-import galleryPlay from "@/assets/gallery-play.jpg";
+import eventOutreach from "@/assets/foundation/foundation_4.jpeg";
+import eventHealthCamp from "@/assets/foundation/foundation_11.jpeg";
+import galleryPlay from "@/assets/foundation/foundation_23.jpeg";
 
 const events = [
   {

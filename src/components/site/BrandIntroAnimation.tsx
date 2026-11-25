@@ -46,8 +46,8 @@ export function BrandIntroAnimation() {
     try {
       const navEntries = performance.getEntriesByType("navigation") as PerformanceNavigationTiming[];
       const isReload =
-        (navEntries.length > 0 && navEntries[0].type === "reload") ||
-        (performance.navigation as any)?.type === 1;
+        (navEntries.length > 0 && navEntries[0]?.type === "reload") ||
+        (performance as any).navigation?.type === 1;
       const hasOpened = sessionStorage.getItem("saraj_has_opened");
 
       // Only show on first open or reload

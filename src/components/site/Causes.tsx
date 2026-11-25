@@ -1,7 +1,7 @@
 import { GraduationCap, HeartPulse, UtensilsCrossed } from "lucide-react";
-import causeEducation from "@/assets/cause-education-clean.png";
-import causeHealth from "@/assets/cause-health.jpg";
-import causeNutrition from "@/assets/cause-nutrition.jpg";
+import causeEducation from "@/assets/foundation/foundation_8.jpeg";
+import causeHealth from "@/assets/foundation/foundation_3.jpeg";
+import causeNutrition from "@/assets/foundation/foundation_9.jpeg";
 
 const causes = [
   {

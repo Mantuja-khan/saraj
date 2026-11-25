@@ -7,8 +7,8 @@ import { ArrowRight, HandHeart } from "lucide-react";
 import cardSpecialChild from "@/assets/card-special-child.png";
 import cardLivelihood from "@/assets/card-livelihood.png";
 import cardAgedCare from "@/assets/card-aged-care.png";
-import causeWomenEmpowerment from "@/assets/cause-women-empowerment.jpg";
-import eventOutreach from "@/assets/event-outreach.jpg";
+import causeWomenEmpowerment from "@/assets/foundation/foundation_27.jpeg";
+import eventOutreach from "@/assets/foundation/foundation_4.jpeg";
 
 export const allInitiatives = [
   {
@@ -88,80 +88,84 @@ export default function Initiatives() {
               Saraj Foundation Initiatives
             </h1>
 
-            <p className="mt-6 text-lg leading-relaxed text-white/80 max-w-2xl mx-auto font-sans">
+            <p className="mt-6 text-lg sm:text-xl leading-relaxed text-white/85 max-w-2xl mx-auto font-sans">
               Dedicated pillars designed to create lasting, sustainable transformation in education,
               special child development, women empowerment, and senior care.
             </p>
           </div>
         </section>
 
-        {/* Initiatives List */}
-        <section className="bg-[#faf7f2] py-16 sm:py-20 lg:py-24">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8 space-y-16">
-            {allInitiatives.map((item, index) => {
-              const isEven = index % 2 === 1;
-              return (
-                <div
-                  key={item.id}
-                  id={item.id}
-                  className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14 rounded-3xl border border-stone-200/90 bg-white p-6 sm:p-10 shadow-lg transition-all duration-300 hover:shadow-xl"
-                >
-                  {/* Image Column */}
-                  <div
-                    className={`relative overflow-hidden rounded-2xl h-[320px] sm:h-[400px] lg:col-span-6 ${
-                      isEven ? "lg:order-2" : ""
-                    }`}
-                  >
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                    <span className="absolute bottom-4 left-4 rounded-full bg-amber-500/90 px-3.5 py-1 text-xs font-bold text-white shadow">
-                      {item.tagline}
-                    </span>
-                  </div>
-
-                  {/* Text Column */}
-                  <div className={`lg:col-span-6 ${isEven ? "lg:order-1" : ""}`}>
-                    <h2 className="font-cursive text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 leading-tight">
-                      {item.title}
-                    </h2>
-
-                    <p className="mt-4 text-sm sm:text-base leading-relaxed text-stone-600">
-                      {item.description}
-                    </p>
-
-                    <div className="mt-6 rounded-2xl bg-amber-50/80 border border-amber-200/80 p-4">
-                      <p className="text-xs font-bold uppercase tracking-wider text-amber-800">
-                        Measurable Impact
-                      </p>
-                      <p className="mt-1 text-sm font-semibold text-stone-800">
-                        {item.impact}
-                      </p>
+        {/* Initiatives Full-Width Content Sections (No Boxes) */}
+        <section className="w-full">
+          {allInitiatives.map((item, index) => {
+            const isEven = index % 2 === 1;
+            return (
+              <div
+                key={item.id}
+                id={item.id}
+                className={`w-full py-16 sm:py-20 lg:py-24 border-b border-stone-200/70 last:border-b-0 ${
+                  isEven ? "bg-[#faf7f2]" : "bg-white"
+                }`}
+              >
+                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                  <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+                    {/* Image Column */}
+                    <div
+                      className={`relative overflow-hidden rounded-3xl h-[340px] sm:h-[420px] lg:h-[460px] w-full shadow-xl lg:col-span-6 ${
+                        isEven ? "lg:order-2" : ""
+                      }`}
+                    >
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                      <span className="absolute bottom-5 left-5 rounded-full bg-amber-500/95 px-4 py-1.5 text-xs font-bold text-white shadow-md">
+                        {item.tagline}
+                      </span>
                     </div>
 
-                    <div className="mt-8 flex flex-wrap items-center gap-4">
-                      <Link
-                        to={item.path}
-                        className="btn-primary !py-3 text-xs font-bold"
-                      >
-                        Learn More
-                        <ArrowRight className="size-4" />
-                      </Link>
-                      <Link
-                        to="/contact"
-                        className="inline-flex items-center justify-center rounded-full border border-stone-300 px-6 py-3 text-xs font-bold tracking-wider uppercase text-stone-700 hover:bg-stone-50 transition-colors"
-                      >
-                        Support This Cause
-                      </Link>
+                    {/* Text Column */}
+                    <div className={`lg:col-span-6 ${isEven ? "lg:order-1" : ""}`}>
+                      <h2 className="font-cursive text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 leading-tight">
+                        {item.title}
+                      </h2>
+
+                      <p className="mt-5 text-base sm:text-lg leading-relaxed text-stone-700 font-sans">
+                        {item.description}
+                      </p>
+
+                      <div className="mt-6 border-l-4 border-amber-500 pl-4 py-2 bg-amber-500/5 rounded-r-xl">
+                        <p className="text-xs font-bold uppercase tracking-wider text-amber-800">
+                          Measurable Impact
+                        </p>
+                        <p className="mt-1 text-base font-semibold text-stone-800 font-sans">
+                          {item.impact}
+                        </p>
+                      </div>
+
+                      <div className="mt-8 flex flex-wrap items-center gap-4">
+                        <Link
+                          to={item.path}
+                          className="btn-primary !py-3 text-xs font-bold"
+                        >
+                          Learn More
+                          <ArrowRight className="size-4" />
+                        </Link>
+                        <Link
+                          to="/contact"
+                          className="inline-flex items-center justify-center rounded-full border border-stone-300 px-6 py-3 text-xs font-bold tracking-wider uppercase text-stone-700 hover:bg-stone-50 transition-colors"
+                        >
+                          Support This Cause
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </section>
       </main>
 

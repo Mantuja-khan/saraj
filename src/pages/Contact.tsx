@@ -63,7 +63,7 @@ export default function Contact() {
                   <h2 className="font-display text-2xl sm:text-3xl font-bold text-stone-900">
                     Reach Out Directly
                   </h2>
-                  <p className="mt-2 text-stone-600 text-sm leading-relaxed">
+                  <p className="mt-2 text-stone-600 text-base leading-relaxed">
                     Feel free to visit our office, give us a call, or email our support staff anytime.
                   </p>
                 </div>

@@ -35,8 +35,7 @@ export function Navbar() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
-
+  
   return (
     <header
       className={`sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur-md transition-all duration-300 ${
@@ -62,7 +61,6 @@ export function Navbar() {
                 HOME
               </Link>
             </li>
-
             <li>
               <Link
                 to="/about"
@@ -71,8 +69,6 @@ export function Navbar() {
                 ABOUT
               </Link>
             </li>
-
-            {/* Simple Initiatives Dropdown */}
             <li
               ref={dropdownRef}
               className="relative"
@@ -158,8 +154,7 @@ export function Navbar() {
             <HeartHandshake className="size-4" />
             Donate
           </Link>
-
-          <button
+          <button 
             type="button"
             onClick={() => setMobileOpen((v) => !v)}
             aria-expanded={mobileOpen}

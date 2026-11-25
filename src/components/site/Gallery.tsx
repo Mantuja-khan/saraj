@@ -1,31 +1,7 @@
 import { useEffect, useRef } from "react";
-import causeEducation from "@/assets/cause-education-clean.png";
-import causeHealth from "@/assets/cause-health.jpg";
-import causeNutrition from "@/assets/cause-nutrition.jpg";
-import eventOutreach from "@/assets/event-outreach.jpg";
-import eventHealthCamp from "@/assets/event-health-camp.jpg";
-import galleryPlay from "@/assets/gallery-play.jpg";
-import newImage1 from "@/assets/image copy.png";
-import newImage2 from "@/assets/image copy 2.png";
-import newImage3 from "@/assets/image copy 3.png";
-import newImage4 from "@/assets/image copy 4.png";
-import newImage5 from "@/assets/image copy 5.png";
-import newImage6 from "@/assets/image copy 6.png";
-
-const tiles = [
-  { src: causeEducation, alt: "Children studying in a village classroom" },
-  { src: newImage1, alt: "Community youth and volunteers together" },
-  { src: causeHealth, alt: "A mother with her healthy baby at a clinic" },
-  { src: newImage3, alt: "Grassroots outreach support drive" },
-  { src: galleryPlay, alt: "Children running and laughing in a field" },
-  { src: newImage4, alt: "Essential items and kits distribution" },
-  { src: causeNutrition, alt: "Children enjoying a warm midday meal" },
-  { src: newImage5, alt: "Community healthcare camp" },
-  { src: eventHealthCamp, alt: "Doctor checking a child at a health camp" },
-  { src: newImage6, alt: "Smiling young beneficiaries" },
-  { src: eventOutreach, alt: "Volunteers handing school kits to children" },
-  { src: newImage2, alt: "Mentorship and education guidance" },
-];
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import { homeGalleryImages } from "@/assets/foundation";
 
 /** In-page scroll reveal for the gallery strip. */
 export function useInViewReveal() {
@@ -54,23 +30,48 @@ export function useInViewReveal() {
 export function Gallery() {
   const ref = useInViewReveal();
   return (
-    <section id="gallery" ref={ref} className="bg-brand-cream pb-2 pt-6">
-      <div className="grid grid-cols-2 gap-2 px-2 sm:grid-cols-3 lg:grid-cols-6">
-        {tiles.map((t, i) => (
-          <figure
-            key={t.alt}
-            className="reveal group relative aspect-[4/5] overflow-hidden rounded-none lg:aspect-auto lg:h-48"
-            style={{ transitionDelay: `${i * 60}ms` }}
+    <section id="gallery" ref={ref} className="bg-brand-cream pb-12 pt-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 mb-8 text-center">
+        <p className="text-xs sm:text-sm font-semibold tracking-wider text-amber-600 uppercase">
+          Moments of Hope &amp; Service
+        </p>
+        <h2 className="mt-2 font-cursive text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wide text-[#1c1815]">
+          Saraj Foundation Gallery
+        </h2>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        {/* Exactly 6 images shown on the home page */}
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          {homeGalleryImages.map((t, i) => (
+            <figure
+              key={`${t.alt}-${i}`}
+              className="reveal group relative aspect-[4/5] overflow-hidden rounded-xl border border-stone-200/80 shadow-sm transition-all duration-300 hover:shadow-md lg:aspect-auto lg:h-52"
+              style={{ transitionDelay: `${i * 60}ms` }}
+            >
+              <img
+                src={t.src}
+                alt={t.alt}
+                loading="lazy"
+                className="h-full w-full object-cover rounded-none transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-brand-dark/0 transition-colors duration-300 group-hover:bg-brand-dark/20" />
+              <span className="absolute bottom-2 left-2 rounded-full bg-black/60 px-2 py-0.5 text-[10px] font-semibold text-white backdrop-blur-xs opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                {t.category}
+              </span>
+            </figure>
+          ))}
+        </div>
+
+        <div className="mt-8 flex justify-center">
+          <Link
+            to="/gallery"
+            className="btn-primary !px-8 !py-3.5 text-xs font-bold tracking-wider shadow-md hover:shadow-lg transition-all"
           >
-            <img
-              src={t.src}
-              alt={t.alt}
-              loading="lazy"
-              className="h-full w-full object-cover rounded-none transition-transform duration-500 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-brand-dark/0 transition-colors duration-300 group-hover:bg-brand-dark/20" />
-          </figure>
-        ))}
+            View Full Photo Gallery
+            <ArrowRight className="size-4 ml-1.5" />
+          </Link>
+        </div>
       </div>
     </section>
   );

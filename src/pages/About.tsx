@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { MissionVisionCircles } from "@/components/site/MissionVisionCircles";
-import aboutChildPortrait from "@/assets/about-child-portrait.jpg";
+import aboutChildPortrait from "@/assets/foundation/foundation_1.jpeg";
 import {
   Sparkles,
   Heart,
@@ -40,7 +40,7 @@ export default function About() {
               About Saraj Foundation
             </h1>
 
-            <p className="mt-6 text-base sm:text-lg leading-relaxed text-white/85 max-w-3xl mx-auto font-sans">
+            <p className="mt-6 text-lg sm:text-xl leading-relaxed text-white/90 max-w-3xl mx-auto font-sans">
               At Saraj Foundation, our mission is rooted in the belief that real change is achieved by
               addressing the multifaceted challenges faced by communities in need. Our approach is
               thoughtfully designed to create a lasting impact, focusing on every level of transformation.
@@ -54,7 +54,7 @@ export default function About() {
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
               {/* Image Side */}
               <div className="relative lg:col-span-5">
-                <div className="relative overflow-hidden rounded-3xl shadow-2xl border-4 border-white bg-amber-50">
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl border-4 border-white bg-transparent">
                   <img
                     src={aboutChildPortrait}
                     alt="Saraj Foundation Child"
@@ -72,14 +72,14 @@ export default function About() {
                 </div>
 
                 <h2 className="font-cursive text-4xl sm:text-5xl font-bold tracking-wide text-[#1c1815]">
-                  A Commitment to Lasting Human Dignity
+                  Our Approach is Modeled Around Bringing Change at All Levels
                 </h2>
 
                 <p className="mt-5 text-base sm:text-lg leading-relaxed text-stone-700 font-sans">
                   At Saraj Foundation, our mission is rooted in the belief that real change is achieved by addressing the multifaceted challenges faced by communities in need. Our approach is thoughtfully designed to create a lasting impact, focusing on every level of transformation.
                 </p>
 
-                <p className="mt-4 text-sm sm:text-base leading-relaxed text-stone-600">
+                <p className="mt-4 text-base sm:text-lg leading-relaxed text-stone-600 font-sans">
                   From grassroots initiatives that empower individuals and families, to community-wide programs that foster inclusivity and social cohesion, and even advocating for policy changes to reshape entire societies, we are committed to driving comprehensive, sustainable, and positive change at every level. Together, we are building a brighter and more equitable future for all.
                 </p>
 
@@ -92,7 +92,7 @@ export default function About() {
                   ].map((pt, i) => (
                     <div key={i} className="flex items-start gap-2.5">
                       <CheckCircle2 className="size-4 text-amber-600 shrink-0 mt-1" />
-                      <span className="text-xs sm:text-sm font-semibold text-stone-800">{pt}</span>
+                      <span className="text-sm sm:text-base font-semibold text-stone-800">{pt}</span>
                     </div>
                   ))}
                 </div>
@@ -164,7 +164,7 @@ export default function About() {
                     <h3 className="font-display text-xl font-bold text-stone-900 mb-3">
                       {item.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-stone-600 font-sans">
+                    <p className="text-sm sm:text-base leading-relaxed text-stone-600 font-sans">
                       {item.desc}
                     </p>
                   </div>
@@ -189,7 +189,7 @@ export default function About() {
               Join Us to Bring Hope and Smiles
             </h2>
 
-            <p className="mt-4 text-base sm:text-lg leading-relaxed text-white/80 max-w-2xl mx-auto font-sans">
+            <p className="mt-4 text-base sm:text-lg leading-relaxed text-white/90 max-w-2xl mx-auto font-sans">
               Every child deserves learning, every elder deserves dignity, and every community deserves a chance to thrive.
               Partner with us today to empower underserved families across India.
             </p>

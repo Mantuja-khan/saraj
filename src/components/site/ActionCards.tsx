@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { HandHeart, ArrowRight } from "lucide-react";
 import cardLivelihood from "@/assets/card-livelihood.png";
-import cardEducation from "@/assets/card-education.png";
+import cardEducation from "@/assets/foundation/foundation_8.jpeg";
 import cardSpecialChild from "@/assets/card-special-child.png";
 
 interface CauseCard {
@@ -84,7 +84,7 @@ export function ActionCards() {
                   {card.title}
                 </h3>
 
-                <p className="mt-3 text-xs sm:text-sm leading-relaxed text-white/90 font-sans line-clamp-4 drop-shadow-sm">
+                <p className="mt-3 text-sm sm:text-base leading-relaxed text-white/95 font-sans line-clamp-4 drop-shadow-sm">
                   {card.description}
                 </p>
               </div>

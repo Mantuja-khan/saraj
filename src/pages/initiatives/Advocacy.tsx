@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
-import eventOutreach from "@/assets/event-outreach.jpg";
+import eventOutreach from "@/assets/foundation/foundation_4.jpeg";
 import { Heart, Sparkles, CheckCircle2, ArrowRight } from "lucide-react";
 
 export default function Advocacy() {
@@ -26,7 +26,7 @@ export default function Advocacy() {
             <h1 className="mt-6 font-cursive text-5xl font-bold tracking-wide sm:text-6xl lg:text-7xl">
               Advocacy &amp; Raising Awareness
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-white/80 max-w-2xl mx-auto">
+            <p className="mt-4 text-base sm:text-lg text-white/85 max-w-2xl mx-auto font-sans">
               Giving voice to the vulnerable by protecting children's rights, combating malnutrition, and encouraging civic participation.
             </p>
           </div>
@@ -48,7 +48,7 @@ export default function Advocacy() {
                 <h2 className="font-cursive text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 leading-tight">
                   Driving Change from Within Grassroots Communities
                 </h2>
-                <p className="mt-4 text-stone-600 leading-relaxed text-sm sm:text-base">
+                <p className="mt-4 text-stone-700 leading-relaxed text-base sm:text-lg font-sans">
                   Sustainable social progress requires shifts in community mindset. We collaborate with village councils, schools, and health workers to eliminate stigma around special needs, advocate for female education, and ensure child protection policies are actively enforced.
                 </p>
 
@@ -61,7 +61,7 @@ export default function Advocacy() {
                   ].map((pt, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <CheckCircle2 className="size-5 text-amber-500 shrink-0 mt-0.5" />
-                      <span className="text-sm font-medium text-stone-800">{pt}</span>
+                      <span className="text-sm sm:text-base font-semibold text-stone-800">{pt}</span>
                     </div>
                   ))}
                 </div>

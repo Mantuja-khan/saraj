@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 import heroSlide1 from "@/assets/hero-slide-1.jpg";
-import heroSlide2 from "@/assets/hero-slide-2.png";
 import heroSlide3 from "@/assets/hero-slide-3.jpg";
 import sarajChildrenLogo from "@/assets/saraj-children-logo.png";
 import heroBgSaraj from "@/assets/hero-bg-saraj.png";
@@ -24,13 +23,6 @@ const slides = [
     title: "Empowering Creative Minds",
     badge: "Creative Learning",
     fitClass: "object-contain lg:object-cover",
-  },
-  {
-    src: heroSlide2,
-    alt: "Rural school children smiling in classroom with notebooks and slates",
-    title: "Classroom Education & Books",
-    badge: "8,500+ Students",
-    fitClass: "object-contain p-2 sm:p-6",
   },
   {
     src: heroSlide3,
@@ -89,7 +81,7 @@ export function Hero() {
           <h1 className="mt-5 max-w-xl font-cursive text-5xl leading-[1.08] font-bold sm:text-6xl lg:text-7xl xl:text-[4.6rem] tracking-wide text-white drop-shadow-md">
             Help The Needy & bring back their smiles 
           </h1>
-          <p className="mt-6 max-w-md text-base leading-relaxed text-white/75">
+          <p className="mt-6 max-w-md text-base sm:text-lg leading-relaxed text-white/85 font-sans">
             Saraj Foundation works in India's underserved villages so every child can learn, grow
             healthy, and build a life full of possibility.
           </p>
@@ -98,24 +90,7 @@ export function Hero() {
               Donate Now
               <ArrowRight className="size-4" />
             </Link>
-            <div className="flex items-center gap-3">
-              <div className="flex -space-x-3">
-                {faces.map((f) => (
-                  <span
-                    key={f}
-                    className="grid size-10 place-items-center rounded-full border-2 border-brand-dark bg-brand-cream-deep font-display text-sm font-semibold text-brand-dark"
-                  >
-                    {f}
-                  </span>
-                ))}
-                <span className="grid size-10 place-items-center rounded-full border-2 border-brand-dark bg-primary text-[10px] font-bold">
-                  12k+
-                </span>
-              </div>
-              <p className="max-w-[9rem] text-xs leading-snug text-white/70">
-                12,500+ supporters already give monthly
-              </p>
-            </div>
+
           </div>
         </div>
 

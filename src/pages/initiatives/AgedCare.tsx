@@ -26,7 +26,7 @@ export default function AgedCare() {
             <h1 className="mt-6 font-cursive text-5xl font-bold tracking-wide sm:text-6xl lg:text-7xl">
               Aged People Care Routine
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-white/80 max-w-2xl mx-auto">
+            <p className="mt-4 text-base sm:text-lg text-white/85 max-w-2xl mx-auto font-sans">
               Ensuring the dignity, physical health, and emotional comfort of senior citizens through regular healthcare, food, and companionship.
             </p>
           </div>
@@ -48,7 +48,7 @@ export default function AgedCare() {
                 <h2 className="font-cursive text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 leading-tight">
                   Honoring and Caring for Our Elders
                 </h2>
-                <p className="mt-4 text-stone-600 leading-relaxed text-sm sm:text-base">
+                <p className="mt-4 text-stone-700 leading-relaxed text-base sm:text-lg font-sans">
                   Elderly citizens in underserved hamlets frequently suffer from untreated chronic conditions, isolation, and lack of nutritional support. The Saraj Foundation coordinates monthly home health visits, delivery of medicines and warm meals, and intergenerational social activities.
                 </p>
 
@@ -61,7 +61,7 @@ export default function AgedCare() {
                   ].map((pt, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <CheckCircle2 className="size-5 text-amber-500 shrink-0 mt-0.5" />
-                      <span className="text-sm font-medium text-stone-800">{pt}</span>
+                      <span className="text-sm sm:text-base font-semibold text-stone-800">{pt}</span>
                     </div>
                   ))}
                 </div>

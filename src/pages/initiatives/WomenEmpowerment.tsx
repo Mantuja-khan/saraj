@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
-import causeWomenEmpowerment from "@/assets/cause-women-empowerment.jpg";
+import causeWomenEmpowerment from "@/assets/foundation/foundation_27.jpeg";
 import { Heart, Sparkles, CheckCircle2, ArrowRight } from "lucide-react";
 
 export default function WomenEmpowerment() {
@@ -26,7 +26,7 @@ export default function WomenEmpowerment() {
             <h1 className="mt-6 font-cursive text-5xl font-bold tracking-wide sm:text-6xl lg:text-7xl">
               Women Empowerment &amp; Skills
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-white/80 max-w-2xl mx-auto">
+            <p className="mt-4 text-base sm:text-lg text-white/85 max-w-2xl mx-auto font-sans">
               Equipping mothers and young women with vocational training, financial literacy, and entrepreneurship opportunities.
             </p>
           </div>
@@ -48,7 +48,7 @@ export default function WomenEmpowerment() {
                 <h2 className="font-cursive text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 leading-tight">
                   Building Independent Futures for Rural Women
                 </h2>
-                <p className="mt-4 text-stone-600 leading-relaxed text-sm sm:text-base">
+                <p className="mt-4 text-stone-700 leading-relaxed text-base sm:text-lg font-sans">
                   When you empower a woman, you lift an entire family. Our women empowerment centers provide modern vocational training, micro-enterprise coaching, and community support groups that allow women to take charge of their economic futures.
                 </p>
 
@@ -61,7 +61,7 @@ export default function WomenEmpowerment() {
                   ].map((pt, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <CheckCircle2 className="size-5 text-amber-500 shrink-0 mt-0.5" />
-                      <span className="text-sm font-medium text-stone-800">{pt}</span>
+                      <span className="text-sm sm:text-base font-semibold text-stone-800">{pt}</span>
                     </div>
                   ))}
                 </div>
